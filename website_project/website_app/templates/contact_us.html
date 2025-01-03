@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <!-- {% load static %} -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+
+    .left {
+      text-align: center;
+      margin-right: 50px;
+    }
+
+    .right {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .navbar {
+      max-height: 65px !important;
+    }
+
+    .nav > li > a:hover {
+      text-decoration: none;
+      background-color: #0a243a75;
+      border-radius: 8px;
+      transition: all 0.5s ease;
+    }
+
+    .navbar-nav > li > a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    footer {
+      background-color: #4d97bb8f;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    footer a {
+      color: #000000;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      .left {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      footer {
+        font-size: 0.9rem;
+        padding: 15px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-fixed-top" style="background-color: #4d97bb8f;">
+    <div class="container-fluid">
+      <div class="navbar-header" style="margin: 10px; padding: 2px; border-radius: 10px;">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="Company_name" style="margin: 10px; text-decoration: none;" href="home" >Elxer</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right" style="margin: 2px;">
+          <li><a href="home">Home</a></li>
+          <li><a href="about">About</a></li>
+          <!-- <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Services</a></li> -->
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="left">
+      <h1 style="font-weight: 900;">Let's build</h1>
+      <h1 style="font-weight: 900;">something</h1>
+      <h1 style="font-weight: 900;">together.</h1><br>
+      <img src="https://www.magureinc.com/img/connectandBuild.118b6a08.gif" alt="Contact Us" width="300" height="300">
+    </div>
+    <div class="right">
+      <form>
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name">
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email">
+        <label for="message">Your message:</label>
+        <textarea id="message" name="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="row" style="margin: 0 auto;">
+      <div class="col-lg-3">
+        <h3 class="Company_name" style="margin-top: 0px; margin-bottom: 0px;">Elxer</h3>
+      </div>
+
+      <div class="col-lg-6"></div>
+
+      <div class="col-lg-3" style="margin-top: 3px; text-align: center;">
+        <a href="contact">Contact Us</a> |
+        <a href="about">About Us</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

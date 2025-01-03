@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elxer IMS</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .card-img-top1 {
+            height: 180px;
+            width: 100%;
+            object-fit: contain;
+            background-color: transparent;
+        }
+
+        .card-img-top2 {
+            height: 180px;
+            width: 80%;
+            object-fit: contain;
+            background-color: transparent;
+        }
+
+        .card-img-top3 {
+            height: 180px;
+            width: 60%;
+            object-fit: contain;
+            background-color: transparent;
+        }
+
+        .card {
+            margin: 15px;
+            text-align: center;
+            border: none;
+            box-shadow: none;
+            background-color: transparent; 
+        }
+
+        .row {
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .myslide {
+            flex: 1; /* This makes the main content area grow and push the footer down */
+        }
+
+        footer {
+            background-color: #4d97bb8f;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Ensures the footer stays at the bottom */
+        }
+
+        footer a {
+            color: #000000;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        .navbar {
+            max-height: 65px !important;
+        }
+
+        .nav>li>a:hover {
+            text-decoration: none;
+            background-color: #0a243a75;
+            border-radius: 8px;
+            transition: all 0.5s ease;
+        }
+
+        .navbar-nav>li>a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .card-img-top1, .card-img-top2 {
+                height: 150px;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .card-img-top1, .card-img-top2 {
+                height: 120px;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top" style="background-color: #4d97bb8f;">
+        <div class="container-fluid">    
+            <div class="navbar-header" style="margin: 10px; padding: 2px; border-radius: 10px;">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="Company_name" style="margin: 10px; text-decoration: none;" href="home">Elxer</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                <ul class="nav navbar-nav navbar-right" style="margin: 2px;">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="about">About</a></li>
+                    <!-- <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li> -->
+                    <li><a href="contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="myslide carousel slide" id="carousel-example-generic" data-interval="false">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active"> 
+                <img src="{% static 'images/dash.jpg' %}" alt="">
+                <div class="carousel-caption">
+                    <div style="background-color: #0d577b75; padding: 5px; border-radius: 10px; margin-bottom: 10px">
+                        <p><h3>Welcome to Elxer, A dynamic IT solutions provider dedicated to empowering businesses through innovative technology. From web development and mobile apps to cloud solutions and cybersecurity, we deliver customized, scalable, and secure digital solutions. Partner with us to transform your ideas into reality and drive your business forward with cutting-edge technology.</h3></p>
+                    </div>
+                    <a href="about" style="text-decoration: none;" class="btn">Learn More</a>
+                    <a href="contact" style="text-decoration: none;" class="btn">Contact Us</a>
+                </div>
+            </div>
+            <div class="item" style="margin-top: 90px;">
+                <div class="video-container">
+                    <h1 style="text-align: center; margin-top: 40px; margin-bottom: 40px;">About Company</h1>
+                    <iframe width="100%" height="755vh" src="{% static 'vedios/john_wick.mp4' %}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>          
+            </div>
+            <div class="item" style="margin-top: 90px;">
+                <div class="container_tech" style="margin-bottom: 110px;">
+                    <h1 style="text-align: center; margin-top: 5px; margin-bottom: 55px;">Our Services</h1>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="{% static 'images/java.png' %}" class="card-img-top1" alt="Java">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="{% static 'images/1e253a8cd019680ccd70c96a71bde689.png' %}" class="card-img-top2" alt="Image 2">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="{% static 'images/php.png' %}" class="card-img-top3" alt="PHP">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="{% static 'images/mysql.png' %}" class="card-img-top1" alt="MySQL">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center" style="display: flex; justify-content: center;">
+                            <div style="width: 18rem; margin: 10px; text-align: center;">
+                                <img src="{% static 'images/html.png' %}" class="card-img-top2" alt="Card Image">
+                                <div class="card-body">
+                                    <!-- Optional content here -->
+                                </div>
+                            </div>
+                        </div>
+                        
+            
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center" style="display: flex; justify-content: center;">
+                            <div style="width: 18rem; margin: 10px; text-align: center;">
+                                <img src="{% static 'images/css.png' %}" class="card-img-top2" alt="Card Image">
+                                <div class="card-body">
+                                    <!-- Optional content here -->
+                                </div>
+                            </div>
+                        </div>
+            
+            
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center" style="display: flex; justify-content: center;">
+                            <div style="width: 18rem; margin: 10px; text-align: center;">
+                                <img src="{% static 'images/js.png' %}" class="card-img-top2" alt="Card Image">
+                                <div class="card-body">
+                                    <!-- Optional content here -->
+                                </div>
+                            </div>
+                        </div>
+            
+            
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center" style="display: flex; justify-content: center;">
+                            <div style="width: 18rem; margin: 10px;">
+                                <img src="{% static 'images/nodejs.png' %}" class="card-img-top1" alt="Card Image">
+                                <div class="card-body">
+                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center" style="display: flex; justify-content: center;">
+                            <div style="width: 18rem; margin: 10px;">
+                                <img src="{% static 'images/flutter.png' %}" class="card-img-top1" alt="Card Image">
+                                <div class="card-body">
+                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center"style="display: flex; justify-content: center;">
+                            <div style="width: 18rem; margin: 10px;">
+                                <img src="{% static 'images/react.png' %}" class="card-img-top1" alt="Card Image">
+                                <div class="card-body">
+                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center" style="display: flex; justify-content: center;">
+                            <div style="width: 18rem; margin: 10px; text-align: center;">
+                                <img src="{% static 'images/aws.png' %}" class="card-img-top1" alt="Card Image">
+                                <div class="card-body">
+                                    <!-- Optional content here -->
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 d-flex justify-content-center" style="display: flex; justify-content: center;">
+                            <div style="width: 18rem; margin: 10px;">
+                                <img src="{% static 'images/android.png' %}" class="card-img-top1" alt="Card Image">
+                                <div class="card-body">
+                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                </div>
+                            </div>
+                        </div>
+          
+                    </div>
+                </div>
+                <footer>
+                    <div class="row" style="margin: 0 auto;">
+                        <div class="col-lg-3">
+                            <h3 class="Company_name" style="margin-top: 0px; margin-bottom: 0px;">Elxer</h3>
+                        </div>
+                        <div class="col-lg-6"></div>
+                        <div class="col-lg-3" style="margin-top: 3px; text-align: center;">
+                            <a href="contact">Contact Us</a> |
+                            <a href="about.html">About Us</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        let currentIndex = 0;
+        const totalItems = document.querySelectorAll('.item').length;
+        let isScrolling = false;
+
+        document.getElementById('carousel-example-generic').addEventListener('wheel', function (e) {
+            if (isScrolling) return;
+            isScrolling = true;
+
+            if (e.deltaY > 0) {
+                currentIndex = Math.min(currentIndex + 1, totalItems - 1);
+            } else {
+                currentIndex = Math.max(currentIndex - 1, 0);
+            }
+
+            $('#carousel-example-generic').carousel(currentIndex);
+
+            setTimeout(() => {
+                isScrolling = false;
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <!-- {% load static %} -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+
+    .left {
+      text-align: center;
+      margin-right: 50px;
+    }
+
+    .right {
+      background-color: #fff;
+      /* padding: 30px; */
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .navbar {
+      max-height: 65px !important;
+    }
+
+    .nav > li > a:hover {
+      text-decoration: none;
+      background-color: #0a243a75;
+      border-radius: 8px;
+      transition: all 0.5s ease;
+    }
+
+    .navbar-nav > li > a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    footer {
+      background-color: #4d97bb8f;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    footer a {
+      color: #000000;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      .left {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      footer {
+        font-size: 0.9rem;
+        padding: 15px 0;
+      }
+    }
+
+    .about-content {
+        background-color: #ffffff;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.8;
+        max-height: 760px;
+        overflow-y: auto;
+    }
+
+        .title {
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+        color: #000000;
+        margin-bottom: 20px;
+        }
+
+        .intro {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-style: italic;
+        }
+
+        h2 {
+        font-size: 24px;
+        margin-top: 20px;
+        color: #000000;
+        }
+
+        .services-list,
+        .why-choose-us-list {
+        list-style: disc;
+        margin: 10px 20px;
+        padding: 0;
+        }
+
+        .services-list li,
+        .why-choose-us-list li {
+        margin-bottom: 10px;
+        }
+
+        .why-choose-us-list li strong,
+        .services-list li strong {
+        color: #333;
+        font-weight: bold;
+        }
+
+        .closing {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 30px;
+        font-weight: bold;
+        color: #555;
+        }
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-fixed-top" style="background-color: #4d97bb8f;">
+    <div class="container-fluid">
+      <div class="navbar-header" style="margin: 10px; padding: 2px; border-radius: 10px;">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="Company_name" style="margin: 10px; text-decoration: none;" href="home" >Elxer</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right" style="margin: 2px;">
+          <li><a href="home">Home</a></li>
+          <li><a href="about">About</a></li>
+          <!-- <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Services</a></li> -->
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="left">
+      <h1 style="font-weight: 900;">About Us</h1><br>
+      <img src="https://www.magureinc.com/img/robot.d61f6a1d.gif" alt="Contact Us" width="300" height="300">
+    </div>
+    <div class="right" style="margin-top: 70px; margin-bottom: 10px;">
+        <div class="about-content">
+          <!-- <h1 class="title">Welcome to Elxer</h1> -->
+          <p class="intro">
+            <h2 style="text-decoration: wavy; font-style: italic; font-weight: bold; text-align: center; color: #1f0164;">Here innovation meets excellence.</h2>
+          </p>
+      
+          <p>
+            At Elxer, we specialize in delivering cutting-edge solutions designed to transform ideas into reality. Founded on the principles of creativity, collaboration, and commitment, we aim to empower businesses and individuals by offering unparalleled services tailored to meet your unique needs.
+          </p>
+      
+          <h2>Our Mission</h2>
+          <p>
+            Our mission is to revolutionize industries by providing top-notch services that blend technology, creativity, and strategy. We are committed to building long-term relationships with our clients by ensuring excellence in every project we undertake.
+          </p>
+      
+          <h2>What We Do</h2>
+          <ul class="services-list">
+            <li><strong>Custom Software Development:</strong> Crafting scalable and efficient software solutions.</li>
+            <li><strong>Website Design & Development:</strong> Creating visually stunning and user-friendly websites.</li>
+            <li><strong>Business Consulting:</strong> Helping clients navigate challenges and seize opportunities in a competitive market.</li>
+          </ul>
+      
+          <h2>Why Choose Us?</h2>
+          <ul class="why-choose-us-list">
+            <li><strong>Expert Team:</strong> Our team consists of passionate professionals with years of experience in their respective fields.</li>
+            <li><strong>Customer-Centric Approach:</strong> We put our clients at the heart of everything we do. Your vision is our mission.</li>
+            <li><strong>Commitment to Quality:</strong> We strive to deliver solutions that exceed expectations and set new benchmarks in the industry.</li>
+          </ul>
+      
+          <h2>Our Vision</h2>
+          <p>
+            At Elxer, we envision a world where technology bridges gaps, drives growth, and creates endless possibilities. We aim to be a trusted partner for businesses worldwide, contributing to their success and growth.
+          </p>
+      
+          <p class="closing">
+            Let’s grow together and create something extraordinary. <br>
+            Thank you for choosing Elxer — let’s innovate, inspire, and transform!
+          </p>
+        </div>
+      </div>
+      
+  </div>
+
+  <footer>
+    <div class="row" style="margin: 0 auto;">
+      <div class="col-lg-3">
+        <h3 class="Company_name" style="margin-top: 0px; margin-bottom: 0px;">Elxer</h3>
+      </div>
+
+      <div class="col-lg-6"></div>
+
+      <div class="col-lg-3" style="margin-top: 3px; text-align: center;">
+        <a href="contact">Contact Us</a> |
+        <a href="about">About Us</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'OuterZone';
+    src: url('../fonts/Outer_zone.ttf') format('truetype'); /* Reference font file */
+}
+
+.Company_name {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'OuterZone', sans-serif;
+    font-weight: 500;
+    padding: 15px 20px 0px 50px;
+    font-size: x-large;
+}
+
+.navbar{
+    background-color: transparent;
+    border-color: transparent;
+}
